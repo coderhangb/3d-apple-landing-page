@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Canvas } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
@@ -7,26 +7,11 @@ import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import MacbookModel from "./models/MacbookModel";
 import StudioLight from "./three/StudioLight";
-import { features, featureSequence } from "../constants";
+import { features } from "../constants";
 
 const ModelScroll = () => {
   const groupRef = useRef(null);
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-
-  // Pre load feature video
-  useEffect(() => {
-    featureSequence.forEach((feature) => {
-      const v = document.createElement("video");
-      Object.assign(v, {
-        src: feature.videoPath,
-        muted: true,
-        playsInline: true,
-        preload: "auto",
-        crossOrigin: "anonymous",
-      });
-      v.load();
-    });
-  }, []);
 
   useGSAP(() => {
     // 3D model rotation timeline
