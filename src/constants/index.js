@@ -26,7 +26,7 @@ const noChangePart = [
   "Object_10",
 ];
 
-const performanceImage = [
+const performanceImages = [
   { id: "p1", src: "/performance1.png" },
   { id: "p2", src: "/performance2.png" },
   { id: "p3", src: "/performance3.png" },
@@ -36,7 +36,7 @@ const performanceImage = [
   { id: "p7", src: "/performance7.png" },
 ];
 
-const performanceImgPosition = [
+const performanceImgPositions = [
   {
     id: "p1",
     left: 5,
@@ -74,7 +74,7 @@ const performanceImgPosition = [
   },
 ];
 
-const feature = [
+const features = [
   {
     id: 1,
     icon: "/feature-icon1.svg",
@@ -131,9 +131,9 @@ const footerLink = [
 export {
   navLinks,
   noChangePart,
-  performanceImage,
-  performanceImgPosition,
-  feature,
+  performanceImages,
+  performanceImgPositions,
+  features,
   featureSequence,
   footerLink,
 };

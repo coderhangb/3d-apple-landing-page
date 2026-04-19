@@ -15,7 +15,7 @@ function Showcase() {
       const video = showcaseRef.current?.querySelector("video");
 
       const init = () => {
-        ScrollTrigger.getAll().forEach((t) => t.kill());
+        tl?.scrollTrigger?.kill();
 
         tl = gsap.timeline({
           scrollTrigger: {
@@ -25,6 +25,7 @@ function Showcase() {
             scrub: true,
             pin: true,
             invalidateOnRefresh: true,
+            refreshPriority: 2,
           },
         });
 
