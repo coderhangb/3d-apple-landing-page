@@ -113,7 +113,7 @@ const features = [
   },
 ];
 
-const footerLink = [
+const footerLinks = [
   { label: "Privacy Policy", link: "#" },
   { label: "Terms of Use", link: "#" },
   { label: "Sales Policy", link: "#" },
@@ -127,5 +127,5 @@ export {
   performanceImages,
   performanceImgPositions,
   features,
-  footerLink,
+  footerLinks,
 };
